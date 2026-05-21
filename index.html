@@ -3,103 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhammasippa Digital - SDN Sumogawe 03</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="css/index.css">
-    
-    <script src="js/navigasi.js" defer></script>
-    <style>
-        .text-shadow-strong {
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.95), -1px -1px 0px rgba(0, 0, 0, 0.9);
-        }
-        .text-shadow-sub {
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.95);
-        }
-    </style>
+    <title>SDN Sumogawe 03 - Platform Pendidikan Agama Buddha</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dharma-menu.css">
 </head>
-<body class="bg-gray-50 font-sans relative">
-
-    <nav id="navbar-dhammasippa" class="bg-white shadow-md sticky top-0 z-50"></nav>
-
-    <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row gap-6 min-h-screen">
-        
-        <aside id="sidebar-dhammasippa" class="w-full md:w-80 flex-shrink-0"></aside>
-
-        <main class="flex-1 space-y-6">
-            
-            <section style="background-image: url('Dhammasippa.jpg.png'); background-size: cover; background-position: center 15%; background-repeat: no-repeat;" 
-                     class="relative rounded-3xl overflow-hidden shadow-2xl min-h-[380px] flex items-center p-8 md:p-14">
-                
-                <div class="absolute inset-0 bg-black/30 z-0"></div>
-                
-                <div class="relative z-10 max-w-2xl text-white space-y-5">
-                    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight text-shadow-strong text-white">
-                        Selamat Datang di <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-300 font-black">Dhammasippa</span>
-                    </h1>
-                    <p class="text-xs md:text-base text-gray-100 font-medium leading-relaxed text-shadow-sub max-w-xl">
-                        Platform edukasi terintegrasi untuk kemudahan belajar, akses materi, manajemen tugas, dan penilaian digital dalam satu tempat.
-                    </p>
-                    <div class="pt-2">
-                        <span class="inline-block text-[11px] font-extrabold tracking-widest uppercase bg-yellow-500 text-blue-950 px-4 py-1.5 rounded-md shadow-md">
-                            <i class="fas fa-graduation-cap mr-1.5"></i> Portal Pembelajaran Digital
-                        </span>
-                    </div>
-                </div>
-            </section>
-
-            <div class="bg-white rounded-2xl shadow-sm border p-8">
-                <div class="flex items-center space-x-3 mb-6 border-b pb-4">
-                    <div class="w-2 h-8 bg-blue-900 rounded-full"></div>
-                    <h2 class="text-xl font-black text-blue-900 uppercase italic">Asisten AI Pendidikan Agama Buddha</h2>
-                </div>
-                
-                <p class="text-xs text-gray-600 mb-4">Silakan tanya langsung kepada Asisten AI kami tentang materi Pendidikan Agama Buddha:</p>
-                
-                <div class="flex gap-3">
-                    <button onclick="panggilAsistenAI()" class="py-3 px-6 bg-blue-600 text-white font-bold text-sm rounded-xl hover:bg-blue-700 transition shadow-md flex items-center gap-2">
-                        <i class="fas fa-robot"></i> Buka Asisten AI
-                    </button>
-                </div>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <h1>🏛️ SDN SUMOGAWE 03</h1>
             </div>
-
-            <div class="bg-white rounded-2xl shadow-sm border p-8">
-                <div class="flex items-center space-x-3 mb-6 border-b pb-4">
-                    <div class="w-2 h-8 bg-yellow-500 rounded-full"></div>
-                    <h2 class="text-xl font-black text-blue-900 uppercase italic">Informasi Terbaru</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="border rounded-xl p-4 hover:border-yellow-500 transition cursor-pointer bg-gray-50">
-                        <span class="text-[9px] font-bold bg-blue-100 text-blue-600 px-2 py-1 rounded">MODUL BARU</span>
-                        <h4 class="font-black mt-2 text-sm text-blue-900">Asesmen Sumatif Bab 1 Kelas 6</h4>
-                        <p class="text-[11px] text-gray-500 mt-1">Sudah tersedia untuk dikerjakan secara online.</p>
-                    </div>
-                </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </main>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">HOME</a></li>
+                <li><a href="#dhammapada" class="nav-link">📖 Syair Dhammapada</a></li>
+                <li><a href="#jataka" class="nav-link">🐰 Cerita Jataka</a></li>
+                <li><a href="#renungan" class="nav-link">🧘 Renungan Harian</a></li>
+                <li><a href="#kuis" class="nav-link">❓ Kuis Dharma</a></li>
+                <li><a href="#faq" class="nav-link">💬 Tanya Jawab</a></li>
+                <li><a href="#galeri" class="nav-link">🖼️ Galeri Kegiatan</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Selamat Datang di Platform Pembelajaran</h2>
+            <p>Pendidikan Agama Buddha dan Budi Pekerti</p>
+            <p class="subtitle">SDN Sumogawe 03 - Kelas 1-6</p>
+        </div>
+    </section>
+
+    <!-- ===== SYAIR DHAMMAPADA ===== -->
+    <section id="dhammapada" class="dharma-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>📖 Syair Dhammapada</h2>
+                <p>Kumpulan ayat-ayat bijak dari Kitab Dhammapada untuk renungan spiritual</p>
+            </div>
+            <div id="dhammapada-content" class="content-area"></div>
+        </div>
+    </section>
+
+    <!-- ===== CERITA JATAKA ===== -->
+    <section id="jataka" class="dharma-section alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>🐰 Cerita Jataka</h2>
+                <p>Cerita-cerita inspiratif dari kehidupan Buddha sebelumnya dengan pesan moral</p>
+            </div>
+            <div id="jataka-content" class="content-area"></div>
+        </div>
+    </section>
+
+    <!-- ===== RENUNGAN HARIAN ===== -->
+    <section id="renungan" class="dharma-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>🧘 Renungan Harian</h2>
+                <p>Renungan harian dari Sutta untuk menemani setiap hari Anda</p>
+            </div>
+            <div id="renungan-content" class="content-area"></div>
+        </div>
+    </section>
+
+    <!-- ===== KUIS DHARMA ===== -->
+    <section id="kuis" class="dharma-section alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>❓ Kuis Dharma</h2>
+                <p>Kuis pembelajaran sesuai Kurikulum Merdeka untuk Kelas 1-6</p>
+            </div>
+            <div id="kuis-content" class="content-area"></div>
+        </div>
+    </section>
+
+    <!-- ===== TANYA JAWAB ===== -->
+    <section id="faq" class="dharma-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>💬 Tanya Jawab (FAQ)</h2>
+                <p>Pertanyaan umum tentang Agama Buddha dan Budi Pekerti</p>
+            </div>
+            <div id="faq-content" class="content-area"></div>
+        </div>
+    </section>
+
+    <!-- ===== GALERI KEGIATAN ===== -->
+    <section id="galeri" class="dharma-section alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>🖼️ Galeri Kegiatan</h2>
+                <p>Dokumentasi kegiatan pembelajaran dan kegiatan keagamaan</p>
+            </div>
+            <div id="galeri-content" class="content-area"></div>
+        </div>
+    </section>
+
+    <!-- Modal untuk Detail Konten -->
+    <div id="dharma-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-content"></div>
+        </div>
     </div>
 
-    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
-        <button onclick="panggilAsistenAI()" class="bg-blue-600 text-white w-14 h-14 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center text-2xl border-2 border-white">
-            <i class="fas fa-robot"></i>
-        </button>
-        <a href="https://wa.me/+62895421265050" class="bg-green-500 text-white w-14 h-14 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center text-2xl decoration-none">
-            <i class="fab fa-whatsapp text-3xl"></i>
-        </a>
-    </div>
-
-    <footer class="bg-blue-950 text-white/50 py-8 text-center text-[10px] font-bold border-t-4 border-yellow-500 mt-10">
-        Created by Lasino @2026 | Dhammasippa Digital | SDN Sumogawe 03
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 SDN Sumogawe 03 - Platform Pendidikan Agama Buddha dan Budi Pekerti</p>
+        <p>Dengan Dukungan AI Pendidikan Agama Buddha</p>
     </footer>
 
-    <script>
-        function panggilAsistenAI() {
-            window.open("https://creator.voiceflow.com/demo/6a09289ea62d285256e0529f", "_blank");
-        }
-    </script>
-
+    <!-- Scripts -->
+    <script src="js/dharma-content.js"></script>
+    <script src="js/dharma-menu.js"></script>
+    <script src="js/navigation.js"></script>
 </body>
 </html>
